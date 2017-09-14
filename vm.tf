@@ -66,7 +66,7 @@ variable temp_private_key {
 }
 
 variable "install_script" {
-  default = "files/default.sh"
+  default = "files/installMongoDB.sh"
   description = "installation script path"
 }
 variable "script_variables" {
