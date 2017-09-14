@@ -88,6 +88,12 @@ resource "ibm_compute_ssh_key" "ssh_key" {
     public_key = "${var.public_key}"
 }
 
+resource "ibm_compute_ssh_key" "temp_ssh_key" {
+    label = "mytempkey"
+    notes = "mynotes"
+    public_key =  "${var.temp_public_key}"
+}
+
 resource "ibm_compute_vm_instance" "vm" {
   hostname                 = "${var.hostname}"
   os_reference_code        = "${var.os_reference_code}"
@@ -101,7 +107,7 @@ resource "ibm_compute_vm_instance" "vm" {
   disks                    = ["${var.disk_size}"]
   dedicated_acct_host_only = true
   local_disk               = false
-  ssh_key_ids              = ["${ibm_compute_ssh_key.ssh_key.id}, ${var.temp_public_key}"]
+  ssh_key_ids              = ["${ibm_compute_ssh_key.ssh_key.id}, ${ibm_compute_ssh_key.temp_ssh_key.id}"]
   tags                     = ["${var.tags}"]
   connection {
     user        = "${var.ssh_user}"
