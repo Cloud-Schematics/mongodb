@@ -1,8 +1,14 @@
-variable "ssh_key" {}
+variable "public_key" {
+    default = "$SCHEMATICS.SSHKEYPUBLIC"
+}
+variable "private_key" {
+    default = "$SCHEMATICS.SSHKEYPRIVATE"
+}
+
 module "mongodb" {
     source = "../terraform-modules/ibm/vm"
-    public_key = "${var.ssh_key}"
+    public_key = "${var.public_key}"
     install_script = "files/installMongoDB.sh"
     script_variables = false
-    temp_private_key = "${file("~/.ssh/id_rsa.pem")}"
+    private_key = "${var.private_key}"
 }
