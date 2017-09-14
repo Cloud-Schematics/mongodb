@@ -107,7 +107,7 @@ resource "ibm_compute_vm_instance" "vm" {
   disks                    = ["${var.disk_size}"]
   dedicated_acct_host_only = true
   local_disk               = false
-  ssh_key_ids              = ["${ibm_compute_ssh_key.ssh_key.id}, ${ibm_compute_ssh_key.temp_ssh_key.id}"]
+  ssh_key_ids              = ["${ibm_compute_ssh_key.ssh_key.id}", "${ibm_compute_ssh_key.temp_ssh_key.id}"]
   tags                     = ["${var.tags}"]
   connection {
     user        = "${var.ssh_user}"
