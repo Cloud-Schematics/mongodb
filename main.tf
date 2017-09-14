@@ -6,7 +6,7 @@ variable "private_key" {
 }
 
 module "mongodb" {
-    source = "../terraform-modules/ibm/vm"
+    source = "github.com/Cloud-Schematics/terraform-modules/ibm/vm"
     public_key = "${var.public_key}"
     install_script = "files/installMongoDB.sh"
     script_variables = false
