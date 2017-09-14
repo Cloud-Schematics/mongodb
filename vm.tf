@@ -59,10 +59,10 @@ variable "public_key" {
 }
 
 variable temp_public_key {
-    default = "$SCHEMATICS.SSHKEYPUBLIC"
+    default = ""
 }
 variable temp_private_key {
-    default = "$SCHEMATICS.SSHKEYPRIVATE"
+    default = ""
 }
 
 variable "install_script" {
