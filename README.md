@@ -4,7 +4,7 @@ An [IBM Cloud Schematics](https://console.bluemix.net/docs/services/schematics/i
 
 Schematics uses [Terraform](https://www.terraform.io/) as the infrastructure as code engine. With this template, you can provision and manage infrastructure as a single unit.
 
-See the [Terraform provider docs](https://ibm-bluemix.github.io/tf-ibm-docs/) for available resource for the IBM Cloud.
+See the [Terraform provider docs](https://ibm-bluemix.github.io/tf-ibm-docs/) for available resources for the IBM Cloud.
 
 
 ## Create an environment with this template
