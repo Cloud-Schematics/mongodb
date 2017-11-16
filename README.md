@@ -4,14 +4,14 @@ An [IBM Cloud Schematics](https://console.bluemix.net/docs/services/schematics/i
 
 Schematics uses [Terraform](https://www.terraform.io/) as the infrastructure as code engine. With this template, you can provision and manage infrastructure as a single unit.
 
-See the [Terraform provider docs](https://ibm-bluemix.github.io/tf-ibm-docs/) for available resource for the IBM cloud.
+See the [Terraform provider docs](https://ibm-bluemix.github.io/tf-ibm-docs/) for available resources for the IBM Cloud.
 
 
 ## Create an environment with this template
 
 Environments can be used to separate software components into development tiers (e.g. staging, QA, and production).
 
-1. In Bluemix, go to the menu and select the [Schematics dashboard](https://console.bluemix.net/schematics).
+1. In IBM Cloud, go to the menu and select the [Schematics dashboard](https://console.bluemix.net/schematics).
 2. In the left navigation menu, select **Templates** to access the template catalog.
 3. Click **Create** on the MongoDB template. You are taken to a configuration page where you can define metadata about your environment. 
 4. In the **Variables** section:
